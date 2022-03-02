@@ -157,12 +157,7 @@ public class PowersApp extends JFrame {
 		int temp = 0;
 		try {
 			temp = Integer.parseInt(in);
-			if(temp>=0 && temp <=1000) {
-				return true;
-			}
-			else {
-				return false;
-			}
+			return true;
 		}
 		catch (Exception e ) {
 			return false;
