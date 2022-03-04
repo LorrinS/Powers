@@ -20,6 +20,14 @@ import java.awt.event.ActionListener;
 import javax.swing.JScrollPane;
 import java.awt.Label;
 
+/**
+File Name: PowersApp
+Programmer:	Lorrin Shen
+Date:		March 4, 2022
+Description:	This is an application that displays a listing of powers.
+Version: 1.0
+*/
+
 public class PowersApp extends JFrame {
 
 	private JPanel contentPane;
@@ -78,7 +86,7 @@ public class PowersApp extends JFrame {
 		contentPane.add(txtExponent);
 		txtExponent.setColumns(10);
 
-		Label lblError = new Label("New label");
+		Label lblError = new Label("");
 		lblError.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		lblError.setBounds(10, 94, 424, 22);
 		contentPane.add(lblError);
@@ -142,12 +150,7 @@ public class PowersApp extends JFrame {
 		Double temp = .0;
 		try {
 			temp = Double.parseDouble(in);
-			if(temp>=0 && temp <=1000) {
-				return true;
-			}
-			else {
-				return false;
-			}
+			return true;
 		}
 		catch (Exception e ) {
 			return false;
